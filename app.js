@@ -35,6 +35,11 @@ atualizarListaAmigos();
 
 function adicionarAmigo() {
     let novoAmigo = document.getElementById("amigo").value.trim();
+    // Verificar se o nome já está na lista
+    if(amigos.includes(novoAmigo)){
+        alert("Esse nome já está na lista. Por favor, digite um nome diferente.");
+        return;
+    }
     if (novoAmigo !== "") {
     amigos.push(novoAmigo);
     document.getElementById("amigo").value = "";
