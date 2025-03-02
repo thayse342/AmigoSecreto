@@ -12,18 +12,7 @@ function atualizarListaAmigos() {
     listaAmigos.appendChild(novoItem);
     }
 }
-atualizarListaAmigos();
 
-function adicionarAmigo() {
-    let novoAmigo = document.getElementById("amigo").value.trim();
-    if (novoAmigo !== "") {
-    amigos.push(novoAmigo);
-    document.getElementById("amigo").value = "";
-    atualizarListaAmigos();
-    } else {
-    alert("Por favor, digite um nome válido.");
-    }
-}
 function sortearAmigo() {
     // Validar que há amigos disponíveis
     if (amigos.length < 2) {
@@ -40,4 +29,17 @@ function sortearAmigo() {
     // Mostrar o resultado
     let resultadoElement = document.getElementById("resultado");
     resultadoElement.textContent = `O amigo sorteado é: ${amigoSorteado}`;
+}
+
+atualizarListaAmigos();
+
+function adicionarAmigo() {
+    let novoAmigo = document.getElementById("amigo").value.trim();
+    if (novoAmigo !== "") {
+    amigos.push(novoAmigo);
+    document.getElementById("amigo").value = "";
+    atualizarListaAmigos();
+    } else {
+    alert("Por favor, digite um nome válido.");
+    }
 }
