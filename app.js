@@ -40,6 +40,9 @@ function adicionarAmigo() {
         alert("Esse nome já está na lista. Por favor, digite um nome diferente.");
         return;
     }
+    // Formatar o nome com a primeira letra em maiúsculo
+    novoAmigo= novoAmigo.chartAt(0).toUpperCase() + novoAmigo.slice(1).toloLowerCase();
+    
     if (novoAmigo !== "") {
     amigos.push(novoAmigo);
     document.getElementById("amigo").value = "";
