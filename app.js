@@ -41,8 +41,8 @@ function adicionarAmigo() {
         return;
     }
     // Formatar o nome com a primeira letra em maiúsculo
-    novoAmigo= novoAmigo.chartAt(0).toUpperCase() + novoAmigo.slice(1).toloLowerCase();
-    
+    novoAmigo= novoAmigo.charAt(0).toUpperCase() + novoAmigo.slice(1).toLowerCase();
+
     if (novoAmigo !== "") {
     amigos.push(novoAmigo);
     document.getElementById("amigo").value = "";
