@@ -24,3 +24,20 @@ function adicionarAmigo() {
     alert("Por favor, digite um nome válido.");
     }
 }
+function sortearAmigo() {
+    // Validar que há amigos disponíveis
+    if (amigos.length < 2) {
+    alert("É necessário ter pelo menos 2 amigos na lista para realizar o sorteio.");
+    return;
+    }
+
+    // Gerar um índice aleatório
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    // Obter o nome sorteado
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    // Mostrar o resultado
+    let resultadoElement = document.getElementById("resultado");
+    resultadoElement.textContent = `O amigo sorteado é: ${amigoSorteado}`;
+}
